@@ -5,12 +5,10 @@
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
     integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-
-  <title>Weather App</title>
+  <title>WanderPlus</title>
   <style>
     .jumbotron {
       padding-top: 2% !important;
@@ -20,10 +18,6 @@
     }
   </style>
 </head>
-
-
-
-
 <body>
   <header>
     <div class="jumbotron jumbotron-fluid text-white bg-dark">
@@ -35,7 +29,7 @@
   <div class='container'>
     <div class='row'>
       <div class='col-md-12 text-center'>
-        <button type='button' placeholder='type in here'> Search your city </button>
+        <button id='search' type='button' placeholder='type in here'> Search your city </button>
         <input id="city-input" type="text" placeholder=" Travel Destination" aria-label="Enter city name">
       </div>
     </div>
@@ -65,9 +59,7 @@
               d="M2 11h1v1H2v-1zm2 0h1v1H4v-1zm-2 2h1v1H2v-1zm2 0h1v1H4v-1zm4-4h1v1H8V9zm2 0h1v1h-1V9zm-2 2h1v1H8v-1zm2 0h1v1h-1v-1zm2-2h1v1h-1V9zm0 2h1v1h-1v-1zM8 7h1v1H8V7zm2 0h1v1h-1V7zm2 0h1v1h-1V7zM8 5h1v1H8V5zm2 0h1v1h-1V5zm2 0h1v1h-1V5zm0-2h1v1h-1V3z" />
           </svg>
           <div id="value-2">
-
           </div>
-
         </div>
       </div>
     </div>
@@ -75,22 +67,15 @@
       <div class='col-md-12 text-center'>
         <!-- enter flights api here -->
         <div id='flights' class='mt-5'>
-
           <div id="value-3">
-
           </div>
-
           <svg width="10em" height="15em" viewBox="0 0 16 17" class="bi bi-compass-fill" fill="currentColor"
             xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd"
               d="M15.5 8.516a7.5 7.5 0 1 1-9.462-7.24A1 1 0 0 1 7 0h2a1 1 0 0 1 .962 1.276 7.503 7.503 0 0 1 5.538 7.24zm-3.61-3.905L6.94 7.439 4.11 12.39l4.95-2.828 2.828-4.95z" />
           </svg>
-
-
         </div>
-
       </div>
-
     </div>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
