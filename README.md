@@ -2,3 +2,6 @@
 
 ### Contributors
 - Kirby
+-Maria
+-James
+-Chris
