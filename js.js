@@ -31,12 +31,14 @@ function query3(country) {
         method: "GET"
       })
       // After the data comes back from the API
+      //kirby started here
       .then(function (response2) {
-        console.log(response2);
-        $('#value-1').html('<h3>'+' Inhabitants:'+ '<br>' + countrypop  )
-        var sunrise = response2[0].results
-        var sunset = response2[0].results
+        //console.log(response2);
+        var sunrise = response2.results.sunrise
+        var sunset = response2.results.sunset
+        $('#sec3').html('<h1>'+' Sunrise:'+ sunrise + '<br>' + 'Sunset:' + sunset)
       });
+      
       });
   }
   var mini = true;
