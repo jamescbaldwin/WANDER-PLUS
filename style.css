@@ -31,7 +31,7 @@ scroll = normal
   min-height: 100%;
 }
 .pimg2 {
-  background-image: url("borders.jpg");
+  background-image: url("assets/borders.jpg");
   min-height: 400px;
 }
 .pimg3 {
@@ -151,4 +151,22 @@ button{
     background: transparent;
     font-size: small;
     padding-top: 20px;
+  }
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    background-color: #282e34;
+    padding: 10px;
+    color:#666; 
+  }
+  
+  .grid-item {
+    background-color: lightgrey;
+    border: 1px;
+    margin: 20px; 
+    padding: 20px;
+    font-size: 20px;
+    text-align: center;
+    color:#666; 
   }
