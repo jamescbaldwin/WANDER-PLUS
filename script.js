@@ -1,4 +1,4 @@
-//place into a document.ready function
+// place into a document.ready function
 $("#search").on('click', function(){
   var country = $("#city-input").val()
   // console.log(cityInput)
@@ -18,6 +18,9 @@ function query3(country) {
      var lat = response3[0].latlng[0]
      var lon = response3[0].latlng[1]
      var borders = response3[0].borders
+     for (let i = 0; i < borders.length; i++) {
+      $('.grid-item1').html("<ol>" + "<li>" + borders.length[i])
+     }
      $('#img').attr({
        src: response3[0].flag,
        title: 'Country Flag',
@@ -32,16 +35,17 @@ function query3(country) {
       method: "GET"
     })
     // After the data comes back from the API
-    //kirby started here
     .then(function (response2) {
-      //console.log(response2);
-      var sunrise = response2.results.sunrise
-      var sunset = response2.results.sunset
-      $('#sec3').html('<h1>'+' Sunrise:'+ sunrise + '<br>' + 'Sunset:' + sunset)
+      console.log(response2);
+    var sunrise = response2.results.sunrise
+    var sunset = response2.results.sunset
+    console.log(sunrise)
+    console.log(sunset)
+      $('.grid-item2').html("<ol>" + "<li> sunrise")
     });
-    
     });
 }
+// james code for the
 var mini = true;
 function toggleSidebar() {
 if (mini) {
