@@ -38,22 +38,41 @@ function restaurants() {
   
   var countryListURL = "https://restcountries.eu/rest/v2/all"
 
-async function start() {
-    const response = await fetch(countryListURL)
-    const data = await response[i].json()
-    createCountryList(data.name)
-    console.log(response[i].name); 
-}
-
-start()
-
-function createCountryList(countryList) {
-    document.getElementById("list").innerHTML = `
-    <select>
-      <option>Traverse the Globe</option>
-      ${Object.keys(countryList).map(function (country) {
-        return `<option>${country}</option>`
-      }).join('')}
-      </select>
-    `
-  }
+  $("#search").on('click', function(){
+    var country = $("#city-input").val()
+    // console.log(cityInput)
+    query3(country);
+    query(country);
+})
+function query3(country) {
+    var queryURL3 = "https://restcountries.eu/rest/v2/name/"+ country + "?fullText=true"
+    // console.log(queryURL3);
+    $.ajax({
+      url: queryURL3,
+      method: "GET"
+    })
+      .then(function (response3) {
+        console.log(response3);
+        var countrypop = response3[0].population
+        $('#value-1').html('<h3>'+' Inhabitants:'+ '<br>' + countrypop  )
+       $('#img').attr({
+         src: response3[0].flag,
+         title: 'Country Flag',
+         alt: 'Country Flag',
+         width: 500, 
+         height: 200
+       });  
+       var queryURL2 = "https://api.sunrise-sunset.org/json?lat=" + lat + "&lng=" + lon;
+       // console.log(queryURL2);
+       $.ajax({
+         url: queryURL2,
+         method: "GET"
+       })
+       // After the data comes back from the API
+       .then(function (response2) {
+         console.log(response2);
+         var sunrise = response2
+         var sunset = response2
+       });
+       });
+   }
