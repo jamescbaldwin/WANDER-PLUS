@@ -17,6 +17,7 @@ function query3(country) {
         $('#value-1').html('<h3>'+' Inhabitants:'+ '<br>' + countrypop  )
        var lat = response3[0].latlng[0]
        var lon = response3[0].latlng[1]
+       var borders = response3[0].borders
        $('#img').attr({
          src: response3[0].flag,
          title: 'Country Flag',
