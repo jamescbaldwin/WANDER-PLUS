@@ -1,14 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Parallax Website</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="sidebar.css">
 </head>
-
 <body>
+    <div id="mySidebar" class="sidebar" onmouseover="toggleSidebar()" onmouseout="toggleSidebar()">
+        <a href="#"><span><i class="material-icons">public</i><span class="icon-text">Countries</span></a><br>
+        <!-- <a href="#"><i class="material-icons">spa</i><span class="icon-text"></span>services</a></span>
+        </a><br>
+        <a href="#"><i class="material-icons">monetization_on</i><span class="icon-text"></span>clients</span></a><br>
+        <a href="#"><i class="material-icons">email</i><span class="icon-text"></span>contact<span></a> -->
+      </div>
     <div class="pimg1">
         <div class="ptext">
             <span class="border">
@@ -19,7 +26,6 @@
             <input id="city-input" type="text" placeholder=" Enter Text" aria-label="Enter city name">
         </div>
     </div>
-
     <section class="section section-light">
         <h2>natives</h2>
         <p id="value-1">
@@ -27,7 +33,6 @@
         <h2><i>Flag</i></h2>
         <img id='img' src="" alt="">
     </section>
-
     <div class="pimg2">
         <div class="ptext">
             <span class="border trans">
@@ -35,7 +40,6 @@
             </span>
         </div>
     </div>
-
     <section class="section section-dark">
         <h2>section two</h2>
         <p>
@@ -49,7 +53,6 @@
             vel dolore ex facere.
         </p>
     </section>
-
     <div class="pimg3">
         <div class="ptext">
             <span class="border trans">
@@ -57,21 +60,20 @@
             </span>
         </div>
     </div>
-
+    <section class="section section-dark">
+        <h2>section three</h2>
+        <!-- divs for content to be loaded in -maria  -->
     <section class="section section-dark">
         <h2>section three</h2>
         <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus voluptatum recusandae, perspiciatis sed ex
-            sequi! Expedita unde consequatur autem eveniet voluptate neque, molestias voluptas quidem inventore error
-            adipisci tempora enim suscipit saepe laudantium, doloribus aliquid necessitatibus illum laboriosam pariatur
-            consectetur natus, nihil sed qui? Quod officia aliquam iste explicabo non, eum adipisci debitis velit libero
-            nostrum tempora possimus, qui optio saepe tempore neque eveniet tenetur impedit et corporis fuga corrupti,
-            voluptas vero labore? Recusandae pariatur veniam blanditiis magnam, sint rem, tempora molestias tenetur
-            perferendis cumque facere assumenda, expedita harum. Dolore doloremque cum architecto enim. Impedit aliquid
-            vel dolore ex facere.
+            <div class="grid-container">
+                <div class="grid-item">1</div>
+                <div class="grid-item">2</div>
+                <div class="grid-item">3</div>
+                <div class="grid-item">4</div>
+            </div>
         </p>
     </section>
-
     <div class="pimg1">
         <div class="ptext">
             <span class="border">
@@ -79,12 +81,15 @@
             </span>
         </div>
     </div>
-
+    <div class="footer" style="text-align: center; padding-top: 1px; opacity: 0.5; margin-top: 0%; color: #282E34;">
+        <p style="margin-top: 0px;"> WANDER + PLUS <br>
+            ©2020 A TRILOGY EDUCATION SERVICES PROJECT <br>
+            Developed by Christopher Derteano, Maria Byler, Kirby Reese, & James Baldwin.
+        </p>
+    </div>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="js.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-
+    <script src="james.js"></script>
 </body>
-
 </html>
