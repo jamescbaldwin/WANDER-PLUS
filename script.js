@@ -15,10 +15,16 @@ $( document ).ready(function() {
     .then(function (response3) {
       console.log(response3);
       var countrypop = response3[0].population
+      $('#value-1').html('<h3>'+' Inhabitants:'+ '<br>' + countrypop  )
+
       var borders = response3[0].borders
      for (i = 0; i < borders.length; i++)
      $('#sec1').html('<h1>'+'Bordering Countries '+ borders)
-      $('#value-1').html('<h3>'+' Inhabitants:'+ '<br>' + countrypop  )
+
+     var languages = response3[0].languages[0].name
+     for (i = 0; i < languages.length; i++)
+     $('#sec2').html('<h1>' + 'Languages ' + languages)
+     
      var lat = response3[0].latlng[0]
      var lon = response3[0].latlng[1]
        $('#img').attr({
@@ -36,7 +42,7 @@ $( document ).ready(function() {
        })
        // After the data comes back from the API
        .then(function (response2) {
-         console.log(response2);
+         //console.log(response2);
          var sunrise = response2.results.sunrise
          var sunset = response2.results.sunset
          $('#sec3').html('<h1>'+'Sunrise '+ sunrise + '<br>' + 'Sunset ' + sunset)
