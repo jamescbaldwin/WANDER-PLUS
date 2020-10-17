@@ -27,7 +27,7 @@ scroll = normal
   background-attachment: fixed;
 }
 .pimg1 {
-  background-image: url("background.jpg");
+  background-image: url("assets/background.jpg");
   min-height: 100%;
 }
 .pimg2 {
@@ -35,7 +35,7 @@ scroll = normal
   min-height: 400px;
 }
 .pimg3 {
-  background-image: url("border2.jpg");
+  background-image: url("assets/border2.jpg");
   min-height: 400px;
 }
 .section{
@@ -76,7 +76,6 @@ button{
 
 .ptext .border.trans{
     background-color: transparent;
-    
 }
 
 @media(max-width:568px){
