@@ -23,15 +23,15 @@ scroll = normal
   background-attachment: fixed;
 }
 .pimg1 {
-  background-image: url("background.jpg");
+  background-image: url("assets/background.jpg");
   min-height: 100%;
 }
 .pimg2 {
-  background-image: url("people.jpg");
+  background-image: url("assets/people.jpg");
   min-height: 400px;
 }
 .pimg3 {
-  background-image: url("border2.jpg");
+  background-image: url("assets/border2.jpg");
   min-height: 400px;
 }
 .section{

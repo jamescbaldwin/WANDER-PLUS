@@ -1,6 +1,3 @@
-var populationEl = document.getElementById('population')
-var attractionEl = document.getElementById('attraction')
-var flightsEl = document.getElementById('flights')
 populationEl.style.display = 'none';
 attractionEl.style.display = 'none';
 flightsEl.style.display = 'none';

@@ -1,15 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallax Website</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="sidebar.css">
 </head>
-
 <body>
-
+    <div id="mySidebar" class="sidebar" onmouseover="toggleSidebar()" onmouseout="toggleSidebar()">
+        <a href="#"><span><i class="material-icons">public</i><span class="icon-text">Countries</span></a><br>
+        <!-- <a href="#"><i class="material-icons">spa</i><span class="icon-text"></span>services</a></span>
+        </a><br>
+        <a href="#"><i class="material-icons">monetization_on</i><span class="icon-text"></span>clients</span></a><br>
+        <a href="#"><i class="material-icons">email</i><span class="icon-text"></span>contact<span></a> -->
+      </div>
+    <div class="pimg1">
+        <div class="ptext">
+            <span class="border">
+                Wander + Plus
+            </span>
+            <br><br>
+            <button id='search' type='button' placeholder='type in here'> Search for a Country </button>
+            <input id="city-input" type="text" placeholder=" Enter Text" aria-label="Enter city name">
+        </div>
     </div>
-
-
+    <section class="section section-light">
+        <h2>natives</h2>
+        <p id="value-1">
+        </p> 
+        <h2><i>Flag</i></h2>
+        <img id='img' src="" alt="">
+    </section>
     <div class="pimg2">
         <div class="ptext">
             <span class="border trans">
@@ -17,7 +40,6 @@
             </span>
         </div>
     </div>
-
     <section class="section section-dark">
         <h2>section two</h2>
         <p>
@@ -31,7 +53,6 @@
             vel dolore ex facere.
         </p>
     </section>
-
     <div class="pimg3">
         <div class="ptext">
             <span class="border trans">
@@ -39,14 +60,19 @@
             </span>
         </div>
     </div>
-
+    <section class="section section-dark">
+        <h2>section three</h2>
+        <!-- divs for content to be loaded in -maria  -->
     <section class="section section-dark">
         <h2>section three</h2>
         <p>
-           This section (or the one above) can include our user story (i.e. the motivations for making the app, the purposes it could serve, and perhaps the learning that ensued from its development)
+            <div class="grid-container">
+                <div class="grid-item">1</div>
+                <div class="grid-item">2</div>
+                <div class="grid-item">3</div>
+            </div>
         </p>
     </section>
-
     <div class="pimg1">
         <div class="ptext">
             <span class="border">
@@ -60,12 +86,9 @@
             Developed by Christopher Derteano, Maria Byler, Kirby Reese, & James Baldwin.
         </p>
     </div>
-
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="js.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-
+    <script src="script.js"></script>
 </body>
-
 </html>
