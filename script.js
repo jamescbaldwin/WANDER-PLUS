@@ -31,8 +31,9 @@ function query3(country) {
      // After the data comes back from the API
      .then(function (response2) {
        console.log(response2);
-       var sunrise = response2
-       var sunset = response2
+       var sunrise = response2.results.sunrise
+       var sunset = response2.results.sunset
+       $('#sec3').html('<h1>'+'Sunrise'+ sunrise + '<br>' + 'Sunset' + sunset)
      });
      });
  };
