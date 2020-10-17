@@ -15,10 +15,12 @@ $( document ).ready(function() {
     .then(function (response3) {
       console.log(response3);
       var countrypop = response3[0].population
+      var borders = response3[0].borders
+     for (i = 0; i < borders.length; i++)
+     $('#sec1').html('<h1>'+'Bordering Countries '+ borders)
       $('#value-1').html('<h3>'+' Inhabitants:'+ '<br>' + countrypop  )
      var lat = response3[0].latlng[0]
      var lon = response3[0].latlng[1]
-    // var borders = response3[0].borders
        $('#img').attr({
          src: response3[0].flag,
          title: 'Country Flag',
@@ -37,7 +39,7 @@ $( document ).ready(function() {
          console.log(response2);
          var sunrise = response2.results.sunrise
          var sunset = response2.results.sunset
-         $('#sec3').html('<h1>'+'Sunrise'+ sunrise + '<br>' + 'Sunset' + sunset)
+         $('#sec3').html('<h1>'+'Sunrise '+ sunrise + '<br>' + 'Sunset ' + sunset)
        });
        });
    };
