@@ -7,6 +7,7 @@
     <title>Parallax Website</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="style.css">
+    <link href="./assets/fontawesome-free-5.15.1-web/css/all.css" rel="stylesheet">
     <!-- <link rel="stylesheet" href="sidebar.css"> -->
 </head>
 <body>
@@ -19,8 +20,12 @@
                 Wander + Plus
             </span>
             <br><br>
-            <button id='search' type='button' placeholder='type in here'> Search </button>
-            <input id="city-input" type="text" placeholder=" search for countries" aria-label="Enter city name">
+            <div class="wrap">
+                <div class="search">
+                    <input class="searchTerm" id="city-input" type="text" placeholder="Country" aria-label="Enter city name">
+                   <button class="searchButton fas fa-search" id='search' type='button' placeholder='type in here' onclick='location.href="#smoothScroll"' ></button>
+                </div>
+             </div>
         </div>
     </div>
     <section class="section section-light main">
@@ -36,7 +41,7 @@
             iusto nam. Harum.
         </p>
     </section>
-    <div class="pimg2 main">
+    <div class="pimg2 main" id="smoothScroll">
         <div class="ptext">
             <span class="border trans">
                 Where will it take you
@@ -58,11 +63,11 @@
         </div>
     </div>
     <section class="section section-dark main">
-        <h2>section three</h2>
+        <h2></h2>
         <div class="grid-container">
-            <div class="grid-item" id ="sec1">1</div>
-            <div class="grid-item" id ="sec2">2</div>
-            <div class="grid-item" id ="sec3">3</div>
+            <div class="grid-item" id ="sec1"></div>
+            <div class="grid-item" id ="sec2"></div>
+            <div class="grid-item" id ="sec3"></div>
           </div>
     </section>
     <div class="pimg1 main">
@@ -74,8 +79,12 @@
                 A TRILOGY EDUCATION SERVICES PROJECT <br>
                 DEVELOPED BY CHRISTOPHER DERTEANO, KIRBY REESE, MARIA BYLER, & JAMES BALDWIN
             </p>
+            <!-- scroll to top  -->
+            <div class="back-to-top-wrapper">
+                <a href="#top" class="topBttn" aria-label="Scroll to Top"><i class="fas fa-arrow-up"></i><br>Top</a>
+            </div>
         </div>
-</div>
+    </div>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="script.js"></script>
