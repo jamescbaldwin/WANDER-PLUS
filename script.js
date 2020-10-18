@@ -19,11 +19,11 @@ $( document ).ready(function() {
 
       var borders = response3[0].borders
      for (i = 0; i < borders.length; i++)
-     $('#sec1').html('<h1>'+'Bordering Countries '+ borders)
+     $('#sec1').html('<h1>'+'Bordering Countries: '+ borders)
 
      var languages = response3[0].languages[0].name
      for (i = 0; i < languages.length; i++)
-     $('#sec2').html('<h1>' + 'Languages ' + languages)
+     $('#sec2').html('<h1>' + 'Languages: ' + '<br>' + languages)
      
      var lat = response3[0].latlng[0]
      var lon = response3[0].latlng[1]
@@ -45,7 +45,7 @@ $( document ).ready(function() {
          //console.log(response2);
          var sunrise = response2.results.sunrise
          var sunset = response2.results.sunset
-         $('#sec3').html('<h1>'+'Sunrise '+ sunrise + '<br>' + 'Sunset ' + sunset)
+         $('#sec3').html('<h1>'+'Sunrise: ' + sunrise + '<br>' + 'Sunset: ' + sunset)
        });
        });
    };
