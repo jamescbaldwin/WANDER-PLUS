@@ -31,7 +31,7 @@ scroll = normal
   min-height: 100%;
 }
 .pimg2 {
-  background-image: url("assets/borders.jpg");
+  background-image: url("assets/border2.jpg");
   min-height: 400px;
 }
 .pimg3 {
@@ -65,8 +65,6 @@ scroll = normal
     opacity: 0.7;
     color:white;
     padding:20px;
-
-
 }
 
 button{
@@ -169,4 +167,46 @@ button{
     font-size: 20px;
     text-align: center;
     color:#666; 
+  }
+
+  /* search bar styling */
+  .search {
+    width: 100%;
+    position: relative;
+    display: flex;
+  }
+  
+  .searchTerm {
+    width: 100%;
+    border: none; 
+    padding: 5px;
+    height: 20px;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    color:#ddd;
+    background-color: #111;
+    opacity: 0.7;
+    font-size: 16px;
+  }
+  
+  .searchButton {
+    width: 80px;
+    height: 30px;
+    background-color: #111;
+    opacity: 0.8;
+    text-align: center;
+    color:#ddd;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 16px;
+    border: none; 
+  }
+  
+  .wrap{
+    width: 20%;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    margin-top: 20px;
+    transform: translate(-50%, -50%);
   }

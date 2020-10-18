@@ -15,7 +15,7 @@ $( document ).ready(function() {
     .then(function (response3) {
       console.log(response3);
       var countrypop = response3[0].population
-      $('#value-1').html('<h3>'+' Inhabitants:'+ '<br>' + countrypop  )
+      $('#value-1').html('<h3>'+' Population:'+ '<br>' + countrypop  )
 
       var borders = response3[0].borders
      for (i = 0; i < borders.length; i++)
