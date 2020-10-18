@@ -1,6 +1,6 @@
 $( document ).ready(function() {
   $("#search").on('click', function(){
-    var country = $("#city-input").val()
+    var country = $("#city-input").val().trim(); 
     // console.log(cityInput)
     query3(country);
     query(country);
