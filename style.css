@@ -169,6 +169,14 @@ button{
     color:#666; 
   }
 
+  /* Smooth scrolling IF user doesn't have a preference due to motion sensitivities */
+  @media screen and (prefers-reduced-motion: no-preference) {
+    html,
+    body {
+      scroll-behavior: smooth;
+    }
+  }
+
   /* search bar styling */
   .search {
     width: 100%;
