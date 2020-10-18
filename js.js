@@ -50,7 +50,7 @@ function query3(country) {
       var sunset = response2.results.sunset
       console.log(sunrise)
       console.log(sunset)
-        $('.grid-item2').html("<ol>" + "<li> sunrise")
+        $('.grid-item2').html("<ul>" + "<li> Sunrise: " + sunrise +"<li> Sunset: "+ sunset)
 
       });
       });
