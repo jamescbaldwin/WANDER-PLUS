@@ -31,6 +31,7 @@ $( document ).ready(function() {
      
      var lat = response3[0].latlng[0]
      var lon = response3[0].latlng[1]
+     
        $('#img').attr({
          src: response3[0].flag,
          title: 'Country Flag',
@@ -318,6 +319,8 @@ $( document ).ready(function() {
     console.log(clickcountry)
     query3(clickcountry);
   })
+
+  
   
   makeList();
   
