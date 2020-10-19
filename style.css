@@ -82,9 +82,10 @@ button{
     }
 }
   .sidebar {
+    text-decoration: none;
     text-align: center;
     height: 100%;
-    width: 85px;
+    width: 80px;
     position: fixed;
     z-index: 1;
     top: 0;
@@ -95,6 +96,8 @@ button{
     overflow-x: hidden;
     padding-top: 60px;
     white-space: nowrap;
+    color:white;
+
   }
   
   .sidebar a {
@@ -160,13 +163,13 @@ button{
   }
   
   .grid-item {
-    background-color: lightgrey;
+    background-color: #282e34;
     border: 1px;
     margin: 20px; 
     padding: 20px;
     font-size: 16px;
     text-align: center;
-    color:#666; 
+    color:white; 
   }
 
   /* Smooth scrolling IF user doesn't have a preference due to motion sensitivities */
@@ -232,7 +235,6 @@ button{
     font: black; 
     text-decoration: none;
   }
-
   a, a:visited, a:hover, a:active {
     color: inherit;
   }
@@ -246,3 +248,9 @@ button{
   } */
 
 
+  /* @media screen and (max-height: 450px) {
+    .grid-item {
+      padding-top: 15px;
+  
+  } */
+  
