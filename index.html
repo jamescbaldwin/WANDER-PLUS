@@ -1,71 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!-- Compiled and minified CSS -->
+    <title>Parallax Website</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="style.css">
+    <link href="./assets/fontawesome-free-5.15.1-web/css/all.css" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="sidebar.css"> -->
 </head>
-
 <body>
-
+    <div id="mySidebar" class="sidebar" onmouseover="toggleSidebar()" onmouseout="toggleSidebar()">
+        <a href="#"><span><i class="material-icons">public</i><span class="icon-text">COUNTRIES</span></a><br>
+      </div>
+    <div class="pimg1 main">
+        <div class="ptext">
+            <span class="border">
+                Wander + Plus
+            </span>
+            <br><br>
+            <div class="wrap">
+                <div class="search">
+                    <input class="searchTerm" id="city-input" type="text" placeholder="Country" aria-label="Enter city name">
+                   <button class="searchButton fas fa-search" id='search' type='button' placeholder='type in here' onclick='location.href="#smoothScroll"' ></button>
+                </div>
+             </div>
+        </div>
     </div>
-
-
-    <div class="pimg2">
+    <section class="section section-light main">
+        <h2>WHO WE ARE</h2>
+        <p>
+            Exploration has long been a feature of the human experience, but only relatively recently has our <br> 
+            access to the world caught up with our desire to traverse it. Major industrial (and technological) breakthroughs <br>
+            have dominated the past 200 years, and thus, nearly any person alive in 2020 can wake up on one side of the globe, <br>
+            and go to sleep on the other. And while millions of people wander the globe each day, perhaps among the more unheralded <br>
+            features of modern tech is the ability to bring the entire world to you. This is exactly what WANDER + PLUS aims to do. <br>
+            We've taken the social and financial barriers down that once hindered people in their pursuit of exploration, <br>
+            and in doing so, provided a glimpse of what the world has to offer with the simple click of a button. <br>
+            So go forth and explore, for as J.R.R. Tolkien once said "Not all those who wander are lost" ... 
+        </p>
+    </section>
+    <div class="pimg2 main" id="smoothScroll">
         <div class="ptext">
             <span class="border trans">
                 Where will it take you
             </span>
         </div>
     </div>
+    <section class="section section-dark main">
+        <h2 id="displayCountryName"></h2>
 
-    <section class="section section-dark">
-        <h2>section two</h2>
-        <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus voluptatum recusandae, perspiciatis sed ex
-            sequi! Expedita unde consequatur autem eveniet voluptate neque, molestias voluptas quidem inventore error
-            adipisci tempora enim suscipit saepe laudantium, doloribus aliquid necessitatibus illum laboriosam pariatur
-            consectetur natus, nihil sed qui? Quod officia aliquam iste explicabo non, eum adipisci debitis velit libero
-            nostrum tempora possimus, qui optio saepe tempore neque eveniet tenetur impedit et corporis fuga corrupti,
-            voluptas vero labore? Recusandae pariatur veniam blanditiis magnam, sint rem, tempora molestias tenetur
-            perferendis cumque facere assumenda, expedita harum. Dolore doloremque cum architecto enim. Impedit aliquid
-            vel dolore ex facere.
+        <p id="value-1">
         </p>
+        <h2><i></i></h2>
+        <img id='img' src="" alt="">
     </section>
-
-    <div class="pimg3">
+    <div class="pimg3 main">
         <div class="ptext">
             <span class="border trans">
                 Imagine the World without Borders
             </span>
         </div>
     </div>
-
-    <section class="section section-dark">
-        <h2>section three</h2>
-        <p>
-           This section (or the one above) can include our user story (i.e. the motivations for making the app, the purposes it could serve, and perhaps the learning that ensued from its development)
-        </p>
+    <section class="section section-dark main">
+        <h2></h2>
+        <div class="grid-container">
+            <div class="grid-item" id ="sec1"></div>
+            <div class="grid-item" id ="sec2"></div>
+            <div class="grid-item" id ="sec3"></div>
+          </div>
     </section>
-
-    <div class="pimg1">
+    <div class="pimg1 main">
         <div class="ptext">
             <span class="border">
                 Wander + Plus
             </span>
+            <p id="footer">
+                A TRILOGY EDUCATION SERVICES PROJECT <br>
+                DEVELOPED BY CHRISTOPHER DERTEANO, KIRBY REESE, MARIA BYLER, & JAMES BALDWIN
+            </p>
+            <!-- scroll to top  -->
+            <div class="back-to-top-wrapper">
+                <a href="#top" class="topBttn" aria-label="Scroll to Top"><i class="fas fa-arrow-up"></i><br>Top</a>
+            </div>
         </div>
     </div>
-    <div class="footer" style="text-align: center; padding-top: 1px; opacity: 0.5; margin-top: 0%; color: #282E34;">
-        <p style="margin-top: 0px;"> WANDER + PLUS <br>
-            ©2020 A TRILOGY EDUCATION SERVICES PROJECT <br>
-            Developed by Christopher Derteano, Maria Byler, Kirby Reese, & James Baldwin.
-        </p>
-    </div>
-
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="js.js"></script>
+    <script src="script.js"></script>
+    <!-- <script src="sidebar.js"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-
 </body>
-
 </html>

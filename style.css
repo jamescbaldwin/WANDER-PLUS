@@ -1,4 +1,4 @@
-body,
+ body,
 html {
   height: 100%;
   margin: 0;
@@ -23,15 +23,15 @@ scroll = normal
   background-attachment: fixed;
 }
 .pimg1 {
-  background-image: url("background.jpg");
+  background-image: url("assets/background.jpg");
   min-height: 100%;
 }
 .pimg2 {
-  background-image: url("people.jpg");
+  background-image: url("assets/border2.jpg");
   min-height: 400px;
 }
 .pimg3 {
-  background-image: url("border2.jpg");
+  background-image: url("assets/border2.jpg");
   min-height: 400px;
 }
 .section{
@@ -68,25 +68,166 @@ button{
 }
 .ptext .border.trans{
     background-color: transparent;
-    
 }
+/* added this in order to get the divs to fit */
 @media(max-width:568px){
     .pimg1, .pimg2, .pimg3{
         background-attachment: scroll;
     }
 }
+  .sidebar {
+    list-style-type: none;
+    text-decoration: none;
+    text-align: center;
+    height: 100%;
+    width: 300px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(75, 75, 75);
+    opacity: 0.9;
+    transition: 0.5s;
+    overflow-x: hidden;
+    padding-top: 60px;
+    white-space: nowrap;
+    color:white;
+  }
+  .sidebar a {
+    /* padding: 8px 8px 8px 32px; */
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+  }
 
-.grid-container {
-  display: grid;
-  grid-template-columns: auto auto auto;
-  background-color: #2196F3;
-  padding: 10px;
-}
+  .sidebar .s {
+    cursor: pointer;
+    background-color: transparent;
+    border-radius: 4px;
+  }
 
-.grid-item {
-  background-color: rgba(255, 255, 255, 0.8);
-  border: 1px;
-  padding: 20px;
-  font-size: 30px;
-  text-align: center;
-}
+  main .sidebar {
+    text-decoration: none;
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  .material-icons,
+  .icon-text {
+    vertical-align: middle;
+  }
+  .material-icons {
+    padding-bottom: 3px;
+    margin-right: 30px;
+  }
+  #main {
+    padding: 16px;
+    margin-left: 85px;
+    transition: margin-left 0.5s;
+  }
+  @media screen and (max-height: 450px) {
+    .sidebar {
+      padding-top: 15px;
+    }
+    .sidebar a {
+      font-size: 18px;
+    }
+  }
+  #footer {
+    color: white;
+    background: transparent;
+    font-size: small;
+    padding-top: 20px;
+  }
+  .grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    background-color: #282e34;
+    padding: 10px;
+    color:#666; 
+  }
+  /* added this dynamically changing font in order to keep the grids to contain themselves within spec range */
+  @media(max-width:580px){
+    h1{
+        font-size: xx-small;
+      }
+      .grid-item{
+        padding:0px;
+        margin: 0px;
+      }
+  }
+/* end of new code */
+  .grid-item {
+    background-color: #282e34;
+    border: 1px;
+    margin: 20px; 
+    padding: 20px;
+    /* changed this font size to dynamically change with screen proportion */
+    font-size: 1vw;
+    /* end change */
+    text-align: center;
+    color:white; 
+  }
+  /* Smooth scrolling IF user doesn't have a preference due to motion sensitivities */
+  @media screen and (prefers-reduced-motion: no-preference) {
+    html,
+    body {
+      scroll-behavior: smooth;
+    }
+  }
+  /* search bar styling */
+  .search {
+    width: 100%;
+    position: relative;
+    display: flex;
+  }
+  .searchTerm {
+    width: 100%;
+    border: none; 
+    padding: 5px;
+    height: 20px;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    color:#ddd;
+    background-color: #111;
+    opacity: 0.7;
+    font-size: 16px;
+  }
+  .searchButton {
+    width: 80px;
+    height: 30px;
+    background-color: #111;
+    opacity: 0.8;
+    text-align: center;
+    color:#ddd;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 16px;
+    border: none; 
+  }
+  .wrap{
+    width: 17%;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    margin-top: 20px;
+    transform: translate(-50%, -50%);
+  }
+  /* back to top button styling */
+  .topBttn {
+    font-size: 28px; 
+    font: black;
+    text-decoration: none; 
+    font-weight: 500;
+  }
+  .topP {
+    font-size: 16px; 
+    font: black; 
+    text-decoration: none;
+  }
+  a, a:visited, a:hover, a:active {
+    color: inherit;
+  }
