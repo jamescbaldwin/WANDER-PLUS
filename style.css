@@ -100,11 +100,13 @@ button{
     color: #818181;
     display: block;
   }
-  /* .sidebar a:hover {
-    color: #f1f1f1;
-    width: 200px;
-    opacity: 1;
-  } */
+
+  .sidebar .s {
+    cursor: pointer;
+    background-color: transparent;
+    border-radius: 4px;
+  }
+
   main .sidebar {
     text-decoration: none;
     position: absolute;

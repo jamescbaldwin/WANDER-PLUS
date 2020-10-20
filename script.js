@@ -1,6 +1,7 @@
 // $(document).ready(function() { 
   $("#search").on('click', function(){
     var country = $("#city-input").val()
+    $("#displayCountryName").html(country)
     // console.log(cityInput)
     query3(country);
     query(country);
@@ -15,7 +16,7 @@
       .then(function (response3) {
         console.log(response3);
       var countrypop = response3[0].population
-      $('#value-1').html('<h3>'+' Inhabitants:'+ '<br>' + countrypop  )
+      $('#value-1').html('<h3>'+' Inhabitants: '+ '<br>' + countrypop  )
   
       var borders = response3[0].borders
       for (let i = 0; i < borders.length; i++)
@@ -48,7 +49,7 @@
          var sunrise = response2.results.sunrise
          var sunset = response2.results.sunset
   
-         $('#sec3').html('<h1>'+'Sunrise '+ sunrise + '<br>' + 'Sunset ' + sunset)
+         $('#sec3').html('<h1>'+'Sunrise: '+ sunrise + '<br>' + 'Sunset: ' + sunset)
        });
        });
    };
