@@ -1,6 +1,6 @@
 #WANDER + PLUS
 
-https://jamescbaldwin.github.io/Multi-API-APP-Project/ 
+https://jamescbaldwin.github.io/WANDER-PLUS/ 
 
 ![wanderplus2](https://user-images.githubusercontent.com/70101203/96619197-dcfe8800-12d3-11eb-8a57-79570a8fb9c8.png)
 
