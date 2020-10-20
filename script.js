@@ -1,4 +1,3 @@
-// $(document).ready(function() { 
   $("#search").on('click', function(){
     var country = $("#city-input").val()
     $("#displayCountryName").html(country)
@@ -340,7 +339,3 @@
       this.hover = true;
     }
   }
-  // })
-  
-  
-  
