@@ -1,61 +1,61 @@
-$(document).ready(function () {
-
-
-  $("#search").on('click', function () {
-    var country = $("#city-input").val().trim();
-    // console.log(cityInput)
-    query3(country);
-
+$("#search").on('click', function(){
+  var country = $("#city-input").val()
+  $("#displayCountryName").html(country)
+  // console.log(cityInput)
+  query3(country);
+  query(country);
+})
+function query3(country) {
+  var queryURL3 = "https://restcountries.eu/rest/v2/name/"+ country + "?fullText=true"
+  // console.log(queryURL3);
+  $.ajax({
+    url: queryURL3,
+    method: "GET"
   })
+    .then(function (response3) {
+      console.log(response3);
+    var countrypop = response3[0].population
+    $('#value-1').html('<h3>'+' Inhabitants: '+ '<br>' + countrypop  )
 
+    var borders = response3[0].borders
+    for (let i = 0; i < borders.length; i++)
+    $('#sec1').html('<h1>' + 'Bordering Countries (abbr): ' + borders)
 
-  function query3(country) {
-    var queryURL3 = "https://restcountries.eu/rest/v2/name/" + country + "?fullText=true"
-    console.log(queryURL3);
+    var languages = response3[0].languages[0].name
+    for (i = 0; i < languages.length; i++)
+    $('#sec2').html('<h1>' + 'Languages: ' + languages)
+
+    var lat = response3[0].latlng[0]
+    var lon = response3[0].latlng[1]
+
+    $('#img').attr({
+      src: response3[0].flag,
+      title: 'Country Flag',
+      alt: 'Country Flag',
+      width: 420, 
+      height: 200
+    });
+      
+    var queryURL2 = "https://api.sunrise-sunset.org/json?lat=" + lat + "&lng=" + lon;
+     // console.log(queryURL2);
     $.ajax({
-      url: queryURL3,
-      method: "GET"
-    })
-      .then(function (response3) {
-        console.log(response3);
-        var countrypop = response3[0].population
-        $('#value-1').html('<h3>' + ' Population:' + '<br>' + countrypop)
+       url: queryURL2,
+       method: "GET"
+     })
+     // After the data comes back from the API
+    .then(function (response2) {
+       console.log(response2);
+       var sunrise = response2.results.sunrise
+       var sunset = response2.results.sunset
 
-        var borders = response3[0].borders
-        for (i = 0; i < borders.length; i++)
-          $('#sec1').html('<h1>' + 'Bordering Countries: ' + borders)
+       $('#sec3').html('<h1>'+'Sunrise: '+ sunrise + '<br>' + 'Sunset: ' + sunset)
+     });
+     });
+ };
 
-        var languages = response3[0].languages[0].name
-        for (i = 0; i < languages.length; i++)
-          $('#sec2').html('<h1>' + 'Languages: ' + '<br>' + languages)
-
-        var lat = response3[0].latlng[0]
-        var lon = response3[0].latlng[1]
-
-        $('#img').attr({
-          src: response3[0].flag,
-          title: 'Country Flag',
-          alt: 'Country Flag',
-          width: 400,
-          height: 200
-        });
-        var queryURL2 = "https://api.sunrise-sunset.org/json?lat=" + lat + "&lng=" + lon;
-        // console.log(queryURL2);
-        $.ajax({
-          url: queryURL2,
-          method: "GET"
-        })
-          // After the data comes back from the API
-          .then(function (response2) {
-            console.log(response2);
-            var sunrise = response2.results.sunrise
-            var sunset = response2.results.sunset
-            $('#sec3').html('<h1>' + 'Sunrise: ' + sunrise + '<br>' + 'Sunset: ' + sunset)
-          });
-      });
-  };
+///keeo all code above
   var countryArray = [
-    "Afghanistan",
+    "Afghanistan", 
     "Åland Islands",
     "Albania",
     "Algeria",
@@ -93,7 +93,7 @@ $(document).ready(function () {
     "Virgin Islands (U.S.)",
     "Brunei Darussalam",
     "Bulgaria",
-    "Burkina Faso",
+    "Burkina Faso", 
     "Burundi",
     "Cambodia",
     "Cameroon",
@@ -195,7 +195,7 @@ $(document).ready(function () {
     "Mali",
     "Malta",
     "Marshall Islands",
-    "Martinique",
+    "Martinique",  
     "Mauritania",
     "Mauritius",
     "Mayotte",
@@ -226,16 +226,16 @@ $(document).ready(function () {
     "Oman",
     "Pakistan",
     "Palau",
-    "Palestine, State of",
+    "Palestine, State of", 
     "Panama",
     "Papua New Guinea",
     "Paraguay",
     "Peru",
     "Philippines",
-    "Pitcairn",
+    "Pitcairn",   
     "Poland",
     "Portugal",
-    "Puerto Rico",
+    "Puerto Rico",  
     "Qatar",
     "Republic of Kosovo",
     "Réunion",
@@ -247,7 +247,7 @@ $(document).ready(function () {
     "Saint Kitts and Nevis",
     "Saint Lucia",
     "Saint Martin (French Part)",
-    "Saint Pierre and Miquelon",
+    "Saint Pierre and Miquelon", 
     "Saint Vincent and the Grenadines",
     "Samoa",
     "San Marino",
@@ -293,13 +293,13 @@ $(document).ready(function () {
     "Uganda",
     "Ukraine",
     "United Arab Emirates",
-    "United Kingdom of Great Britain and Northern Ireland",
+    "United Kingdom of Great Britain and Northern Ireland", //abbr
     "United States of America",
     "Uruguay",
     "Uzbekistan",
     "Vanuatu",
     "Vatican City",
-    "Venezuela (Bolivarian Republic of)",
+    "Venezuela (Bolivarian Republic of)", //abbr
     "Viet Nam",
     "Wallis and Futuna",
     "Western Sahara",
@@ -310,34 +310,32 @@ $(document).ready(function () {
 
   function makeList() {
     for (let i = 0; i < countryArray.length; i++) {
-      $('#mySidebar').append(`<li> <button class='s'>  ${countryArray[i]}  </button> </li>`)
-    }
+      $('#mySidebar').append(`<li> <button class='s'>  ${countryArray[i]}  </button> </li>`) 
+    }   
     // figure out how to make everything a button as well
   }
-  $('#mySidebar').on('click', '.s', function () {
+  $('#mySidebar').on('click', '.s' , function(){
     var clickcountry = $(this).text().trim()
     console.log(clickcountry)
     query3(clickcountry);
+    $("#displayCountryName").html(clickcountry)
   })
 
+makeList();
 
+var hover = true;
 
-  makeList();
-
-  var hover = true;
-
-  function toggleSidebar() {
-    if (hover) {
-      // console.log("opening sidebar");
-      document.getElementById("mySidebar").style.width = "300px";
-      $("")
-      document.getElementById("main").style.marginLeft = "200px";
-      this.hover = false;
-    } else {
-      // console.log("closing sidebar");
-      document.getElementById("mySidebar").style.width = "40px";
-      document.getElementById("main").style.marginLeft = "40px";
-      this.hover = true;
-    }
+function toggleSidebar() {
+  if (hover) {
+    // console.log("opening sidebar");
+    document.getElementById("mySidebar").style.width = "210px";
+    $("")
+    // document.getElementById("main").style.marginLeft = "200px";
+    this.hover = false;
+  } else {
+    // console.log("closing sidebar");
+    document.getElementById("mySidebar").style.width = "40px";
+    // document.getElementById("main").style.marginLeft = "40px";
+    this.hover = true;
   }
-});
+}

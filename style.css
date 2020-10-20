@@ -1,7 +1,4 @@
-/* body {
-    font-family: "Lato", sans-serif;
-  } */
-  body,
+body,
 html {
   height: 100%;
   margin: 0;
@@ -11,7 +8,6 @@ html {
   line-height: 1.8em;
   color: #666;
 }
-
 .pimg1,
 .pimg2,
 .pimg3 {
@@ -66,27 +62,21 @@ scroll = normal
     color:white;
     padding:20px;
 }
-
 button{
     background-color:black;
     color:white;
 }
-
 .ptext .border.trans{
     background-color: transparent;
 }
 /* added this in order to get the divs to fit */
-
-
-
 @media(max-width:568px){
     .pimg1, .pimg2, .pimg3{
         background-attachment: scroll;
     }
-    
-    
 }
   .sidebar {
+    list-style-type: none;
     text-decoration: none;
     text-align: center;
     height: 100%;
@@ -102,9 +92,7 @@ button{
     padding-top: 60px;
     white-space: nowrap;
     color:white;
-
   }
-  
   .sidebar a {
     /* padding: 8px 8px 8px 32px; */
     text-decoration: none;
@@ -112,13 +100,13 @@ button{
     color: #818181;
     display: block;
   }
-  
-  /* .sidebar a:hover {
-    color: #f1f1f1;
-    width: 200px;
-    opacity: 1;
-  } */
-  
+
+  .sidebar .s {
+    cursor: pointer;
+    background-color: transparent;
+    border-radius: 4px;
+  }
+
   main .sidebar {
     text-decoration: none;
     position: absolute;
@@ -127,23 +115,19 @@ button{
     font-size: 36px;
     margin-left: 50px;
   }
-  
   .material-icons,
   .icon-text {
     vertical-align: middle;
   }
-  
   .material-icons {
     padding-bottom: 3px;
     margin-right: 30px;
   }
-  
   #main {
     padding: 16px;
     margin-left: 85px;
     transition: margin-left 0.5s;
   }
-  
   @media screen and (max-height: 450px) {
     .sidebar {
       padding-top: 15px;
@@ -152,14 +136,12 @@ button{
       font-size: 18px;
     }
   }
-  
   #footer {
     color: white;
     background: transparent;
     font-size: small;
     padding-top: 20px;
   }
-
   .grid-container {
     display: grid;
     grid-template-columns: auto auto auto;
@@ -189,7 +171,6 @@ button{
     text-align: center;
     color:white; 
   }
-
   /* Smooth scrolling IF user doesn't have a preference due to motion sensitivities */
   @media screen and (prefers-reduced-motion: no-preference) {
     html,
@@ -197,14 +178,12 @@ button{
       scroll-behavior: smooth;
     }
   }
-
   /* search bar styling */
   .search {
     width: 100%;
     position: relative;
     display: flex;
   }
-  
   .searchTerm {
     width: 100%;
     border: none; 
@@ -217,7 +196,6 @@ button{
     opacity: 0.7;
     font-size: 16px;
   }
-  
   .searchButton {
     width: 80px;
     height: 30px;
@@ -230,7 +208,6 @@ button{
     font-size: 16px;
     border: none; 
   }
-  
   .wrap{
     width: 17%;
     position: relative;
@@ -239,7 +216,6 @@ button{
     margin-top: 20px;
     transform: translate(-50%, -50%);
   }
-
   /* back to top button styling */
   .topBttn {
     font-size: 28px; 
@@ -247,7 +223,6 @@ button{
     text-decoration: none; 
     font-weight: 500;
   }
-
   .topP {
     font-size: 16px; 
     font: black; 
@@ -256,5 +231,3 @@ button{
   a, a:visited, a:hover, a:active {
     color: inherit;
   }
-
-  
