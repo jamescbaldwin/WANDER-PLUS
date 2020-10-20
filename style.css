@@ -76,6 +76,7 @@ button{
     }
 }
   .sidebar {
+    list-style-type: none;
     text-decoration: none;
     text-align: center;
     height: 100%;
