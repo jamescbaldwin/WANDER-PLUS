@@ -1,5 +1,5 @@
   $("#search").on('click', function(){
-    var country = $("#city-input").val()
+    var country = $("#city-input").val().trim(); 
     $("#displayCountryName").html(country)
     // console.log(cityInput)
     query3(country);
